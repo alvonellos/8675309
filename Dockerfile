@@ -29,6 +29,8 @@ RUN docker-php-ext-install \
     pdo \
     pdo_mysql \
     pdo_sqlite \
+    pdo_pgsql \
+    pgsql \
     phar \
     posix \
     readline \
