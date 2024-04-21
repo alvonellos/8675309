@@ -1,53 +1,7 @@
 # Use the official PHP image with PHP 8.3 FPM
 FROM php:8.3-fpm
 
-# Install necessary PHP extensions
-RUN docker-php-ext-install \
-    calendar \
-    ctype \
-    curl \
-    dom \
-    exif \
-    fileinfo \
-    filter \
-    ftp \
-    gd \
-    gettext \
-    hash \
-    iconv \
-    intl \
-    json \
-    ldap \
-    mbstring \
-    mysqli \
-    opcache \
-    openssl \
-    pcntl \
-    pcre \
-    pdo \
-    pdo_mysql \
-    pdo_sqlite \
-    pdo_pgsql \
-    pgsql \
-    phar \
-    posix \
-    readline \
-    session \
-    shmop \
-    simplexml \
-    sockets \
-    spl \
-    sqlite3 \
-    sysvmsg \
-    sysvsem \
-    sysvshm \
-    tokenizer \
-    xml \
-    xmlreader \
-    xmlwriter \
-    xsl \
-    zip \
-    zlib
+# Install necessary PHP extension
 
 # Set the working directory inside the container
 WORKDIR /var/www
