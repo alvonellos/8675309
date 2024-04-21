@@ -10,7 +10,7 @@ WORKDIR /var/www
 COPY . /var/www
 
 # Expose the port the app runs on
-EXPOSE 9093
+EXPOSE 8093
 
 # Start PHP-FPM server
 CMD ["php-fpm"]

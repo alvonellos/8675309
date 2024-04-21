@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        dockerImageName = 'alvonellos/8675309'
+        dockerImageName = 'alvonellos/8675309-app'
         // Define your Docker image name
-        kubernetesNamespace = '8675309' // Update with your Kubernetes namespace
+        kubernetesNamespace = '8675309-app' // Update with your Kubernetes namespace
         kubeconfig = credentials('cluster') // Use the ID of the Kubernetes credential
     }
 

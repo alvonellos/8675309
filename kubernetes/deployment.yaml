@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 8675309 #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
+  name: 8675309-app #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
   labels:
-    app: 8675309
+    app: 8675309-app
 spec:
   replicas: 2
   strategy:
@@ -13,15 +13,15 @@ spec:
       maxUnavailable: 0
   selector:
     matchLabels:
-      app: 8675309
+      app: 8675309-app
   template:
     metadata:
       labels:
-        app: 8675309
+        app: 8675309-app
     spec:
       containers:
         - name: bug #The name of the container
-          image: alvonellos/8675309:$BUILD_NUMBER #The Docker image
+          image: alvonellos/8675309-app:$BUILD_NUMBER #The Docker image
           imagePullPolicy: Always
           ports:
             - containerPort: 8093
