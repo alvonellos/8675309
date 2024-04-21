@@ -3,8 +3,6 @@ FROM php:8.3-fpm
 
 # Install necessary PHP extensions
 RUN docker-php-ext-install \
-    bcmath \
-    bz2 \
     calendar \
     ctype \
     curl \
