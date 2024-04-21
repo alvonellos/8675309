@@ -29,14 +29,14 @@ RUN docker-php-ext-install \
     pdo \
     pdo_mysql \
     pdo_sqlite \
-    Phar \
+    phar \
     posix \
     readline \
     session \
     shmop \
-    SimpleXML \
+    simplexml \
     sockets \
-    SPL \
+    spl \
     sqlite3 \
     sysvmsg \
     sysvsem \
