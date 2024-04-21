@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 8675309 #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
+  labels:
+    app: 8675309
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: 8675309
+  template:
+    metadata:
+      labels:
+        app: 8675309
+    spec:
+      containers:
+        - name: bug #The name of the container
+          image: alvonellos/8675309:$BUILD_NUMBER #The Docker image
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8093
+              hostPort: 8093
+              hostIP: 0.0.0.0
+              protocol: "TCP"
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"
+            - name: TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: vault
+                  key: TOKEN
+
